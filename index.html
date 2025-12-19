@@ -701,8 +701,8 @@
             
             // 含まれていない文字を探す
             const missingChars = inputChars.filter(originalChar => {
-                let targetChar = originalChar;
-                let targetTextToSearch = combinedText;
+                let targetChar = originalChar.toLowerCase();
+                let targetTextToSearch = combinedText.toLowerCase();
 
                 // チェックボックスがONの場合、両方を清音化して比較
                 if (ignoreDakuten) {
